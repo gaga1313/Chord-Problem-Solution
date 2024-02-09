@@ -11,6 +11,8 @@ Given a list of chords in a circle, count the number of intersections, if any. F
 
 `The idea behind algorithm is any chord 'x' will intersect other chord 'y' if its start 's_x' or end 'e_x' (not both) is in between the start 's_y' and end 'e_y' of the chord y.` 
 
+## How to run:
+
 ## Variables:
 
 `chord_ranks`   - An hashmap to maintain the order of chords (helps in optimizing search for start point of a chord).
