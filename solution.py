@@ -1,10 +1,3 @@
-def count_bits_to_right(num, i):
-    bit_mask = (1<<(i -1))-1
-    bits_to_right = num & bit_mask
-    if bits_to_right == 0:
-        return 0
-    return int.bit_count(bits_to_right)
-
 def find_intersections(input_radians_identifiers):
 
     n = len(input_radians_identifiers[0])
@@ -19,6 +12,7 @@ def find_intersections(input_radians_identifiers):
 
     # Assigning rank to each chord
     for i in range(n-1, -1, -1):
+        
         identifier = input_radians_identifiers[1][i]
         if identifier[0] == 's':
             chord_ranks[identifier] = total_chords
@@ -39,6 +33,14 @@ def find_intersections(input_radians_identifiers):
             active_chords_bv &= ~(1<<ac_rank) # setting the bit at 'rank' to 0 (similar to removing current chord from active_chord)
     
     return intersections
+
+## function to count bits to the right of current bits
+def count_bits_to_right(num, i):
+    bit_mask = (1<<(i -1))-1
+    bits_to_right = num & bit_mask
+    if bits_to_right == 0:
+        return 0
+    return int.bit_count(bits_to_right)
 
 if __name__ =='__main__':
     input_radians_identifiers = [('0.78', '1.47', '1.77', '1.99'), ('s1', 's2', 'e1','e2')]

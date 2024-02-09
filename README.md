@@ -18,6 +18,9 @@ Given a list of chords in a circle, count the number of intersections, if any. F
 `total_chords`  - total number of chords parsed.
 `intersection`  - output variable.
 
+## Functions:
+`find_intersections` - Finds number of intersections give correct input [(radian measures), (identifiers)]
+`count_bits_to_right` - Finds number of set bits to the right of the rank bit. 
 ## Code Explanation:
 
 Firstly we create a 'chord_ranks' hashmap by iterating the radian identifiers in reverse orders. At every time encountering a new start point 'sx' we add it to the hashmap with key 'sx' and value 'total_chords'. The 'total_chords' variable maintains number of chords encountered until current iteration.
