@@ -4,7 +4,7 @@ Given a list of chords in a circle, count the number of intersections, if any. F
 Solution:
 
 Time complexity:
-The problem can be solved in O(nlogn) time complexity in Python and O(n) time complexity in Java, C++. The space complexity is O(n).
+`The problem can be solved in O(nlogn) time complexity in Python and O(n) time complexity in Java, C++. The space complexity is O(n).`
 
 Algorithm:
 The idea behind algorithm is any chord 'x' will intersect other chord 'y' if its start 's_x' or end 'e_x' (not both) is in between the start 's_y' and end 'e_y' of the chord y. 
