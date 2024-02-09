@@ -13,10 +13,10 @@ Given a list of chords in a circle, count the number of intersections, if any. F
 
 ## Variables:
 
-`chord_ranks`   - An hashmap to maintain the order of chords (helps in optimizing search for start point of a chord) \\
-`active_chords_bv` - An integer to track all active chords (bitwise operations)
-`total_chords`  - total number of chords parsed
-`intersection`  - output variable
+`chord_ranks`   - An hashmap to maintain the order of chords (helps in optimizing search for start point of a chord).
+`active_chords_bv` - An integer to track all active chords (bitwise operations).
+`total_chords`  - total number of chords parsed.
+`intersection`  - output variable.
 
 ## Code Explanation:
 
