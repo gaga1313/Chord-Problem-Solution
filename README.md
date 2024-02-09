@@ -50,5 +50,5 @@ Upon encountering an end point 'ex' we find the 'rank' of corresponding 'sx' fro
 After completing the loop we return the 'intersections' output.
 
 ## Note !
-`The bitcount operation in Java, C++ languages is O(1) time complexity, due to limit on integer size
-Where as in Python-3 the bitcount is O(logn) due to uncapped integer size.`
+`The bitcount operation in Java, C++ languages has O(1) time complexity, due to limit on integer size. Therefore the current solution in C++ or Java would be O(n) complexity.
+Where as in Python-3 the bitcount is O(logn) due to uncapped integer size. Hence the final complexity of current solution is O(nlogn).`
