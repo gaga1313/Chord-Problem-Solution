@@ -11,7 +11,22 @@ Given a list of chords in a circle, count the number of intersections, if any. F
 
 `The idea behind algorithm is any chord 'x' will intersect other chord 'y' if its start 's_x' or end 'e_x' (not both) is in between the start 's_y' and end 'e_y' of the chord y.` 
 
+## Assumptions:
+
+1) Radian Measure list is sorted
+2) Identifier are denoted as `sx` and `ex`
+3) `sx <= ex`
+
 ## How to run:
+
+Step 1:
+Set the input test cases in the `main` function using list `input_radians_identifiers`.
+
+Step 2:
+run `python solution.py`
+
+Output:
+The `solution.py` prints `intersection` values for all test cases.
 
 ## Variables:
 
@@ -23,6 +38,7 @@ Given a list of chords in a circle, count the number of intersections, if any. F
 ## Functions:
 `find_intersections` - Finds number of intersections give correct input [(radian measures), (identifiers)]
 `count_bits_to_right` - Finds number of set bits to the right of the rank bit. 
+
 ## Code Explanation:
 
 Firstly we create a 'chord_ranks' hashmap by iterating the radian identifiers in reverse orders. At every time encountering a new start point 'sx' we add it to the hashmap with key 'sx' and value 'total_chords'. The 'total_chords' variable maintains number of chords encountered until current iteration.
@@ -33,6 +49,6 @@ Upon encountering an end point 'ex' we find the 'rank' of corresponding 'sx' fro
 
 After completing the loop we return the 'intersections' output.
 
-## Note
+## Note !
 `The bitcount operation in Java, C++ languages is O(1) time complexity, due to limit on integer size
 Where as in Python-3 the bitcount is O(logn) due to uncapped integer size.`

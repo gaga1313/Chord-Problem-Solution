@@ -43,6 +43,11 @@ def count_bits_to_right(num, i):
     return int.bit_count(bits_to_right)
 
 if __name__ =='__main__':
-    input_radians_identifiers = [('0.78', '1.47', '1.77', '1.99'), ('s1', 's2', 'e1','e2')]
-    intersections = find_intersections(input_radians_identifiers)
-    print(intersections)
+    input_radians_identifiers = [[(0.78, 1.47, 1.77, 3.92), ('s1', 's2', 'e1','e2')], 
+                                 [(0.9, 1.3, 1.70, 2.92),   ('s1', 'e1', 's2', 'e2')],
+                                 [(0.9, 1.3, 1.70, 2.92, 3.0, 3.5, 3.6, 4, 4.1, 4.2),   ('s1', 's2', 's3', 's4', 'e1', 'e4', 's5', 'e3', 'e2', 's5')]]
+    
+    n_tests = len(input_radians_identifiers)
+    for i in range(n_tests):
+        intersections = find_intersections(input_radians_identifiers[i])
+        print(f'Number of Intersections in test case {i} : {intersections}')
